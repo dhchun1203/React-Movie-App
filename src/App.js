@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+	state = {
+		isLoading: true,
+		movies: [],
+	};
+	componentDidMount() {
+		// fetch data
+		// 만일 fetch data가 완료되면 isLoading을 false로 바꾸고
+		// data를 렌더링 할 것!
+		setTimeout(() => {
+			this.setState({
+				isLoading: false,
+			});
+		}, 2000);
+	}
+	render() {
+		const { isLoading } = this.state;
+		return <div>{isLoading ? "Loading..." : "We are ready"}</div>;
+	}
 }
 
 export default App;
