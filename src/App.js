@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { Component } from "react";
 
 class App extends Component {
@@ -5,19 +6,26 @@ class App extends Component {
 		isLoading: true,
 		movies: [],
 	};
+	getMovies = async () => {
+		const movies = await axios
+			.get("https://yts-proxy.nomadcoders1.now.sh/list_movies.json")
+			.then((response) => response.data.data.movies);
+
+		this.setState({
+			isLoading: false,
+			movies: [movies],
+		});
+	};
 	componentDidMount() {
-		// fetch data
-		// 만일 fetch data가 완료되면 isLoading을 false로 바꾸고
-		// data를 렌더링 할 것!
-		setTimeout(() => {
-			this.setState({
-				isLoading: false,
-			});
-		}, 2000);
+		this.getMovies();
 	}
 	render() {
-		const { isLoading } = this.state;
-		return <div>{isLoading ? "Loading..." : "We are ready"}</div>;
+		const { isLoading, movies } = this.state;
+		return (
+			<div>
+				{isLoading ? "Loading..." : movies.map((movie) => console.log(movie))}
+			</div>
+		);
 	}
 }
 
