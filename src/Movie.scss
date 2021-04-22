@@ -11,12 +11,19 @@ $margin-medium: 8px;
 	height: 400px;
 	width: 630px;
 	min-width: 600px;
-	margin: 10px 20px;
+	margin: 40px 20px;
 	padding: 10px;
 	background-color: white;
+	border-radius: 8px;
 	transition: transform 200ms ease-in-out;
 	&:hover {
 		transform: scale(1.1);
+		-webkit-box-shadow: 1px 2px 47px -7px $shadow-color;
+		box-shadow: 1px 2px 47px -7px $shadow-color;
+	}
+	img {
+		position: relative;
+		top: -50px;
 		-webkit-box-shadow: 1px 2px 47px -7px $shadow-color;
 		box-shadow: 1px 2px 47px -7px $shadow-color;
 	}
