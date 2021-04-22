@@ -1,0 +1,40 @@
+.movie {
+	display: flex;
+	height: 400px;
+	width: 630px;
+	min-width: 600px;
+	margin: 10px 20px;
+	padding: 10px;
+	background-color: white;
+	transition: transform 200ms ease-in-out;
+}
+.movie:hover {
+	transform: scale(1.1);
+	-webkit-box-shadow: 1px 2px 47px -7px #333333;
+	box-shadow: 1px 2px 47px -7px #333333;
+}
+.movie__data {
+	margin-left: 8px;
+	overflow: auto;
+}
+.movie__title {
+	margin-bottom: 4px;
+}
+.movie__year {
+	margin: 4px 0;
+}
+.movie__genres {
+	margin: 4px 0;
+	font-size: 18px;
+	color: gray;
+}
+.movie__rating {
+	margin: 4px 0;
+	font-size: 16px;
+	color: gray;
+}
+
+.movie__summary {
+	color: darkgray;
+	font-size: 16px;
+}

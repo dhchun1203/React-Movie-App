@@ -1,3 +1,13 @@
 body {
-	background-color: #2f2f2f;
+	margin: 0;
+	padding: 0;
+	background-color: #d3d3d3;
+	font-family: "Roboto Slab", serif;
+	box-sizing: border-box;
+}
+.movies {
+	padding: 20px 20px;
+	display: flex;
+	flex-flow: row wrap;
+	box-shadow: 5px 5px;
 }
