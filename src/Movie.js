@@ -8,7 +8,7 @@ function Movie({ year, title, summary, poster, genres, rating }) {
 		<div className="movie">
 			<img src={poster} alt="poster" title={title} />
 			<div className="movie__data">
-				<a href={titleUrl} target="_blank">
+				<a href={titleUrl} target="_blank" rel="noreferrer">
 					<span>
 						<h3 className="movie__title">{title}</h3>
 					</span>

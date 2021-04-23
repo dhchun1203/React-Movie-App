@@ -6,6 +6,10 @@ $font-medium: 18px;
 $margin-small: 4px;
 $margin-medium: 8px;
 
+$breakpoint-mobile: 335px;
+$breakpoint-tablet: 758px;
+$breakpoint-desktop: 1024px;
+
 .movie {
 	display: flex;
 	height: 400px;
@@ -61,6 +65,21 @@ $margin-medium: 8px;
 		.movie__summary {
 			color: $summay-color;
 			font-size: $font-small;
+		}
+	}
+}
+@mixin mobile {
+	@media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+		.movie {
+			width: 100px;
+		}
+	}
+}
+
+@mixin tablet {
+	@media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+		.movie {
+			width: 300px;
 		}
 	}
 }
