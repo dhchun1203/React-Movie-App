@@ -14,12 +14,12 @@ $breakpoint-desktop: 1024px;
 	display: flex;
 	height: 400px;
 	width: 630px;
-	min-width: 600px;
 	margin: 40px 20px;
 	padding: 10px;
 	background-color: white;
 	border-radius: 8px;
 	transition: all 200ms ease-in-out;
+
 	&:hover {
 		transform: scale(1.1);
 		-webkit-box-shadow: 1px 2px 47px -7px $shadow-color;
@@ -68,18 +68,28 @@ $breakpoint-desktop: 1024px;
 		}
 	}
 }
-@mixin mobile {
-	@media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
-		.movie {
-			width: 100px;
+@media screen and (max-width: 758px) {
+	.movie {
+		width: 300px;
+		flex-direction: column;
+		img {
+			height: 50%;
+			width: 50%;
 		}
-	}
-}
-
-@mixin tablet {
-	@media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
-		.movie {
-			width: 300px;
+		.movie__data {
+			font-size: 70%;
+			.movie__title {
+				margin-top: 0;
+			}
+			.movie__genres {
+				font-size: 80%;
+			}
+			.movie__rating {
+				font-size: 80%;
+			}
+			.movie__summary {
+				font-size: 88%;
+			}
 		}
 	}
 }

@@ -40,3 +40,12 @@ body {
 		}
 	}
 }
+@media screen and (max-width: 758px) {
+	.scrollBtn {
+		font-size: 30px;
+		&.visible {
+			pointer-events: stroke;
+			opacity: 0.6;
+		}
+	}
+}
