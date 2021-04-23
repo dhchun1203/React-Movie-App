@@ -1,0 +1,38 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #d3d3d3;
+	font-family: "Roboto Slab", serif;
+	box-sizing: border-box;
+}
+.movies {
+	padding: 20px 20px;
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap;
+	box-shadow: 5px 5px;
+}
+.scrollBtn {
+	background-color: transparent;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	opacity: 0;
+	position: fixed;
+	position: -webkit-sticky;
+	position: sticky;
+	font-size: 60px;
+	top: 90%;
+	left: 97%;
+	z-index: 1;
+	pointer-events: none;
+	transition: all 400ms ease-in-out;
+	&.visible {
+		pointer-events: auto;
+		opacity: 0.6;
+		&:hover {
+			transform: scale(1.2);
+			opacity: 0.8;
+		}
+	}
+}
